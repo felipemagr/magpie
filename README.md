@@ -3,11 +3,12 @@
 Sort a folder of images into your own categories. Fully local: nothing leaves your machine.
 
 ```bash
-make install
-uv run magpie init ~/Pictures/inbox     # name up to 5 categories
-uv run magpie run ~/Pictures/inbox      # classify and summarise
-uv run magpie apply ~/Pictures/inbox    # preview the plan; add --yes to copy
-uv run magpie undo ~/Pictures/inbox     # changed your mind
+uv tool install git+https://github.com/felipemagr/magpie
+
+magpie init ~/Pictures/inbox     # name up to 5 categories
+magpie run ~/Pictures/inbox      # classify and summarise
+magpie apply ~/Pictures/inbox    # preview the plan; add --yes to copy
+magpie undo ~/Pictures/inbox     # changed your mind
 ```
 
 magpie scores every image against your category descriptions with
@@ -18,7 +19,7 @@ Try it on 200 random everyday photos:
 
 ```bash
 make samples
-uv run magpie run samples
+magpie run samples
 ```
 
 How it works: [`docs/spec.md`](docs/spec.md).
