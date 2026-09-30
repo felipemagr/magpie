@@ -5,6 +5,7 @@ from pathlib import Path
 
 import numpy as np
 import torch
+from huggingface_hub.utils import logging as hub_logging
 from PIL import Image, ImageOps
 from pillow_heif import register_heif_opener
 from transformers import AutoModel, AutoProcessor
@@ -15,6 +16,7 @@ PROMPT = "This is a photo of {}."
 
 register_heif_opener()
 logging.set_verbosity_error()
+hub_logging.set_verbosity_error()
 logging.disable_progress_bar()
 
 
