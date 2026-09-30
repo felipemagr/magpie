@@ -3,9 +3,13 @@ name = "magpie"
 version = "0.1.0"
 description = "Sort a folder of images into your own categories, fully local"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.12"
 dependencies = [
+    "pillow>=12.3.0",
+    "pillow-heif>=1.8.0",
     "rich>=13.9",
+    "torch>=2.14.0",
+    "transformers>=5.18.0",
     "typer>=0.15",
 ]
 
@@ -27,12 +31,13 @@ packages = ["src/magpie"]
 
 [tool.ruff]
 line-length = 100
-target-version = "py311"
+target-version = "py312"
 src = ["src", "tests"]
 extend-exclude = [".claude", "*.md"]
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B"]
+ignore = ["B905"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

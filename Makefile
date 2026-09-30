@@ -1,11 +1,14 @@
 .DEFAULT_GOAL := help
-.PHONY: help install test test-quick lint format quality ci clean
+.PHONY: help install samples test test-quick lint format quality ci clean
 
 help: ## Show this help
 	@grep -E '^[a-zA-Z_-]+:.*## ' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*## "}; {printf "  %-12s %s\n", $$1, $$2}'
 
 install: ## Install dependencies
 	uv sync
+
+samples: ## Download 200 random everyday photos into samples/ (N=200 to change)
+	uv run python scripts/samples.py $(or $(N),200)
 
 test: ## Run all tests
 	uv run pytest -q
