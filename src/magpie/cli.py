@@ -204,7 +204,7 @@ def summary(results: list[Result]) -> None:
     for name, files in sorted(groups.items(), key=lambda g: (g[0] in (OTHER, UNSURE), -len(g[1]))):
         dim = name in (OTHER, UNSURE)
         bar = "" if dim else "█" * max(1, round(24 * len(files) / most))
-        examples = ", ".join(files[:2]) + (", ..." if len(files) > 2 else "")
+        examples = ", ".join(files[:2]) + (", …" if len(files) > 2 else "")
         table.add_row(
             f"[dim]{name}[/]" if dim else f"[bold]{name}[/]",
             f"[cyan]{bar}[/]",

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3b82c4"/>
+      <stop offset="1" stop-color="#1f9e8f"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="#f4efe6"/>
+  <!-- tail -->
+  <path d="M50 78 L14 112 Q12 116 17 116 L60 86 Z" fill="url(#sheen)"/>
+  <path d="M50 78 L22 110 L28 112 L58 84 Z" fill="#12141a" opacity=".35"/>
+  <!-- body -->
+  <path d="M84 30 C100 30 104 50 96 64 C90 76 80 88 62 90 C50 91 44 84 46 74 C48 62 62 54 68 44 C72 36 76 30 84 30 Z" fill="#12141a"/>
+  <!-- belly -->
+  <path d="M92 58 C90 74 80 86 64 88 C74 80 80 70 84 58 Z" fill="#ffffff"/>
+  <!-- wing -->
+  <path d="M70 52 C80 54 84 64 78 74 C72 82 60 86 50 84 C58 76 62 62 70 52 Z" fill="url(#sheen)"/>
+  <path d="M71 55 C76 58 77 63 74 67 C70 64 69 60 71 55 Z" fill="#ffffff"/>
+  <!-- beak and eye -->
+  <path d="M97 38 L112 42 L97 46 Z" fill="#12141a"/>
+  <circle cx="88" cy="39" r="3.2" fill="#ffffff"/>
+  <circle cx="88.6" cy="39" r="1.6" fill="#12141a"/>
+  <!-- legs -->
+  <path d="M70 89 L68 100 M76 88 L77 100" stroke="#12141a" stroke-width="3" stroke-linecap="round"/>
+  <path d="M40 101 H96" stroke="#12141a" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- the shiny thing -->
+  <path d="M112 20 Q113.5 27 120 28.5 Q113.5 30 112 37 Q110.5 30 104 28.5 Q110.5 27 112 20 Z" fill="#f2b233"/>
+</svg>
